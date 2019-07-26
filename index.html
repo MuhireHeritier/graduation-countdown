@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Graduation-Countdown</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="container">
+            <div class="head">CS Graduation 2015</div>
+            <div id="counter"></div>
+            <div class="box title"></div>
+            <div class="box title"></div>
+            <div class="box title"></div>
+            <div class="box title"></div>
+        </div>
+        <script>
+            var countDownDate = new Date("Feb 28, 2020 00:00:00").getTime();
+
+            var x = setInterval(function(){
+                var time = new Date().getTime();
+                var timeLeft = countDownDate - time;
+
+                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("counter").innerHTML = '<div class="box time">' + days + '</div><div class="box time">' + hours + '</div><div class="box time">' + minutes + '</div><div class="box time">' + seconds + '</div>';
+
+                 }, 1000);      
+        </script>
+    </body>
+</html>
