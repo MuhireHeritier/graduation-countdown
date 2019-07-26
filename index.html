@@ -15,6 +15,9 @@
             <div class="box title"></div>
             <div class="box title"></div>
         </div>
+        <div class="footer">
+                <p>By Heritier Muhire &copy; 2019</p>
+        </div>
         <script>
             var countDownDate = new Date("Feb 28, 2020 00:00:00").getTime();
 
@@ -27,7 +30,7 @@
                 var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-                document.getElementById("counter").innerHTML = '<div class="box time">' + days + '</div><div class="box time">' + hours + '</div><div class="box time">' + minutes + '</div><div class="box time">' + seconds + '</div>';
+                document.getElementById("counter").innerHTML = '<div class="box time">' + days + '<div class="text">Days</div></div><div class="box time">' + hours + '<div class="text">hours</div></div><div class="box time">' + minutes + '<div class="text">minutes</div></div><div class="box time">' + seconds + '<div class="text">seconds</div></div>';
 
                  }, 1000);      
         </script>
